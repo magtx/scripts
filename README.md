@@ -113,4 +113,5 @@ SSH into the control node and follow the steps below:
 - Which file do you update to make Ansible run the playbook on a specific machine? Update the hosts file 
 - How do I specify which machine to install the ELK server on versus which to install filebeat on? By adding [elk] and [webservers] in your playbook
   will make sure the correct server has ELK or Filebeat.
-- Which URL do you navigate to in order to check that the ELK server is running? http://40.71.23.100:5601/app/kibana
+- Which URL do you navigate to in order to check that the ELK server is running? [http://40.71.23.100:5601/app/kibana]
+
