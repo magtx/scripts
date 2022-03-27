@@ -77,9 +77,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 What is the main advantage of automating configuration with Ansible? It keeps everything streamlined and congruant leading to less mistakes.
 
 The playbook implements the following tasks:
-- Configuring Web VM with Docker
+- Configuring Web VM with docker
 - Install pip3
-- Install Docker python module  
+- Install docker python module 
 - Download and launch a docker web container
 - Enable docker service
 
@@ -97,7 +97,9 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat collects file data that it puts into log files, which then sends the files to Elasticsearch in the Elk Server.  Theses log files show what information has changed and when.
+- Metricbeat collects metric data which includes the CPU and memory usage data at the OS, Process, and File System levels. It funnels the information to Elasticsearch to the be visualized by
+  Kibana.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
